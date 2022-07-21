@@ -27,18 +27,25 @@ class Solution:
     def licensePlate(self, str):
         # type str: string
         # return: int
-        count = str.count('.')
-        combs = 0
-        if count > 0:
-            combs = 1
-        for i in str:
-            if i == '.':
-                if i < 3:
-                    combs *= 24
-                else:
-                    combs *= 7
+        c = 0
+        for i in range(0, 3):
+            if str[i] == '.':
+                c += 1
+        k = 0
+        for i in range(3, 7):
+            if str[i] == '.':
+                k += 1
+
+        result = 1
+
+        for i in range(24, 24+c):
+            result *= i
+
+        for i in range(7, 7+k):
+            result *= i
+
+        return result
         # TODO: Write code below to return an int with the solution to the prompt
-        return combs
 
 
 def main():
