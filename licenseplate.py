@@ -38,11 +38,11 @@ class Solution:
 
         result = 1
 
-        for i in range(24, 24+c)
-            result*=i
+        for i in range(24, 24+c):
+            result *= i
 
         for i in range(7, 7+k):
-            result*=i
+            result *= i
 
         return result
         # TODO: Write code below to return an int with the solution to the prompt
