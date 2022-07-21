@@ -31,8 +31,8 @@ class Solution:
         combs = 0
         if count > 0:
             combs = 1
-        for i in str:
-            if i == '.':
+        for i in range(0, len(str) - 1):
+            if str[i] == '.':
                 if i < 3:
                     combs *= 24
                 else:
